@@ -26,7 +26,7 @@ def train_model(itr,train_rank,threads,seed,cpu_model,dataset):
     target = torch.tensor([1.], device='cuda')
     with torch.no_grad():
         cuda_model = deepcopy(cpu_model)
-    cuda_model.to('cuda:0')
+        cuda_model.to('cuda:0')
     opt = torch.optim.Adam(cpu_model.parameters())
     parallel_train_sampler = torch.utils.data.distributed.DistributedSampler(dataset, num_replicas=threads, rank=train_rank, seed=seed,
                                                                   drop_last=True)
