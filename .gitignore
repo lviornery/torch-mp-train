@@ -215,5 +215,8 @@ __marimo__/
 # Streamlit
 .streamlit/secrets.toml
 
-figs/*
-log/node/*
+# Figures
+figs/*.png
+
+# PyCharm stuff
+.idea/*

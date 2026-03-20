@@ -39,7 +39,7 @@ BASE_POS = 3.
 BASE_VEL = 1.
 BASE_ACCEL = 10.
 SLICE_STEP=10
-TRAJ_LOSS_EXP = 1.2
+TRAJ_LOSS_EXP = 2
 TRAJ_POWER = 2
 THREADS = 6
 
@@ -51,7 +51,6 @@ traj_loss_obj = traj_util.TrajLossObj(traj_loss_exp=TRAJ_LOSS_EXP,traj_pos_scale
 
 #setup torch
 save="figs"
-log_folder = "./log/node"
 #torch.manual_seed(0) #disable for nondeterministic behavior
 
 def main():
